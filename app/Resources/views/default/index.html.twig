@@ -1,7 +1,20 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Homepage{% endblock %}
+
 {% block body %}
-  Hello -  {{ a }}
+  Hello world  {{ a }}
+  <br>
+
+  {% if not some_value %}
+    {{ 'YES' }}
+  {% endif %}
+  <br>
+
+    {% for key, some_item in some_array %}
+        {{ key }}-{{ some_item }}  <br>
+    {% endfor %}
+
 {% endblock %}
 
 {% block stylesheets %}{% endblock %}
